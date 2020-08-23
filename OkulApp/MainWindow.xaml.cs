@@ -31,22 +31,15 @@ namespace OkulApp
 
         private void Btnkaydet_Click(object sender, RoutedEventArgs e)
         {
-
             Ogrenci og = new Ogrenci();
             OgrenciBL ogrenciBL = new OgrenciBL();
             og.Ad = txtad.Text.Trim();
             og.Soyad = txtsoyad.Text.Trim();
             og.Numara = Convert.ToInt32((txtnumara.Text.Trim()));
             ogrenciBL.Kaydet(og);
-
-
-
-
-
-
         }
-        
+
     }
 }
-    
+
 

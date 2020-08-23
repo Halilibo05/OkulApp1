@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OkulApp.Models", "OkulApp.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OkulApp.BLL", "OkulApp.DLL\OkulApp.BLL.csproj", "{26EF4695-82F6-47E8-B9F6-81CA8FCB08F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OkulApp.DAL", "OkulApp.DAL\OkulApp.DAL.csproj", "{8900B129-3F67-4EA2-9C75-05E0E73EFE14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{26EF4695-82F6-47E8-B9F6-81CA8FCB08F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26EF4695-82F6-47E8-B9F6-81CA8FCB08F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26EF4695-82F6-47E8-B9F6-81CA8FCB08F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8900B129-3F67-4EA2-9C75-05E0E73EFE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8900B129-3F67-4EA2-9C75-05E0E73EFE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8900B129-3F67-4EA2-9C75-05E0E73EFE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8900B129-3F67-4EA2-9C75-05E0E73EFE14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

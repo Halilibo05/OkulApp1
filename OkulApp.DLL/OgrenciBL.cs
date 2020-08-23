@@ -1,4 +1,5 @@
-﻿using OkulApp.Models;
+﻿using OkulApp.DAL;
+using OkulApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -13,25 +14,33 @@ namespace OkulApp.DLL
     {
         public bool Kaydet(Ogrenci ogr)
         {
-            using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cstr"].ConnectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("Insert into tblogrenciler Values(@Ad,@Numara,@Soyad)", cn))
-                {
+            Helper hlpr = new Helper();
+            //using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cstr"].ConnectionString))
+            //{
+            //    using (SqlCommand cmd = new SqlCommand("Insert into tblogrenciler Values(@Ad,@Numara,@Soyad)", cn))
+            //    {
 
-                    SqlParameter[] p =
+            //        SqlParameter[] p =
+            //        {
+            //            new SqlParameter("@Ad",ogr.Ad),
+            //            new SqlParameter("@Soyad", ogr.Soyad),
+            //            new SqlParameter("@Numara", ogr.Numara) };
+
+
+
+            //        return hlpr.ExecuteNonQuery() > 0;
+
+            //    }
+            SqlParameter[] p =
                     {
                         new SqlParameter("@Ad",ogr.Ad),
                         new SqlParameter("@Soyad", ogr.Soyad),
                         new SqlParameter("@Numara", ogr.Numara) };
-                    cmd.Parameters.AddRange(p);
-                    cn.Open();
 
-                    return cmd.ExecuteNonQuery() > 0;
-
-                }
-
+            return hlpr.ExecuteNonQuery("Insert into tblOgrenciler Values(@Ad,@Soyad,@Numara)", p) > 0;
 
             }
         }
     }
-}
+
+
